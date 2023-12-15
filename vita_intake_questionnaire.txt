@@ -1,0 +1,109 @@
+Before: <link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+<div id="icon" style="background-size: 110px 100px;background-image: url('https://jszafir.github.io/ctl/pexels-nataliya-vaitkevich-6863259.jpg');"></div>
+<h2 style="text-align:center;">VITA Intake</h2>
+<p><b>This is a <a href="https://www.codingthelaw.org/#mission">class project</a>. The author is not an official affiliate of CAAS Somerville.</b></p>
+
+<p>This questionnaire should take no more than 10-15 minutes to complete (depending on your answers) and will determine whether your income tax return will require a basic or advanced preparer.</p>
+
+<p>Once finished, you may follow the instructions to schedule your free income tax preparation appointment.</p>
+
+Q(1): Not including government benefits, was your total income in 2023 greater than $70,000?
+A: Yes.
+	Q(1.1): Unfortunately, you do not qualify for our free income tax program. <p>If you would like to learn more about income tax preparation or how to become a volunteer income tax preparer, you can find more information here: <a href="https://www.irs.gov/individuals/irs-tax-volunteers">https://www.irs.gov/individuals/irs-tax-volunteers</a>.</p>
+A: No.
+	Q(1.2):GOTO:2
+
+Q(2): Do you or your spouse have wages or salary to report (Form W-2)? An example of Form W-2 can be found here: <a href="https://www.irs.gov/pub/irs-pdf/fw2.pdf">https://www.irs.gov/pub/irs-pdf/fw2.pdf</a>.
+A: Yes.
+	Q(2.1):GOTO:3
+A: No.
+	Q(2.2):GOTO:3
+
+Q(3): Did you or your spouse receive tip income?
+A: Yes. 
+	Q(3.1):GOTO:ADV
+A: No.
+	Q(3.2):GOTO:4
+	A: No.
+
+Q(4): Did you or your spouse receive self-employment income? This may include Form 1099-MISC (<a href="https://www.irs.gov/pub/irs-pdf/f1099msc.pdf">https://www.irs.gov/pub/irs-pdf/f1099msc.pdf</a>), Form 1099-NEC (<a href="https://www.irs.gov/pub/irs-pdf/f1099nec.pdf">https://www.irs.gov/pub/irs-pdf/f1099nec.pdf</a>), or Form 1099-K (<a href="https://www.irs.gov/pub/irs-pdf/f1099k.pdf">https://www.irs.gov/pub/irs-pdf/f1099k.pdf</a>)?
+A: Yes.
+	Q(4.1):GOTO:ADV
+A: No.
+	Q(4.2):GOTO:5
+
+Q(5): Did you or your spouse receive income in the form of cash, checks, digital assets, or other property, work, or services performed not reported on Forms W-2 or 1099?
+A: Yes.
+	Q(5.1):GOTO:ADV
+A: No.
+	Q(5.2):GOTO:6
+
+Q(6): Did you or your spouse receive income (or incur losses) from the sale or exchange of stocks, bonds, digital assets, or real estate (including your home)? This may include Form 1099-S (<a href="https://www.irs.gov/pub/irs-pdf/f1099s.pdf">https://www.irs.gov/pub/irs-pdf/f1099s.pdf</a>) or Form 1099-B (<a href="https://www.irs.gov/pub/irs-pdf/f1099b.pdf">https://www.irs.gov/pub/irs-pdf/f1099b.pdf</a>).
+A: Yes.
+	Q(6.1):GOTO:ADV
+A: No.
+	Q(6.2):GOTO:7
+
+Q(7): Did you or your spouse receive retirement income or payments from pensions, annuities, or IRAs? This would include Form 1099-R (<a href="https://www.irs.gov/pub/irs-pdf/f1099r.pdf">https://www.irs.gov/pub/irs-pdf/f1099r.pdf</a>).
+A: Yes.
+	Q(7.1):GOTO:ADV
+A: No.
+	Q(7.2):GOTO:8
+
+Q(8): Did you or your spouse pay expenses related to self-employment income or any other income you received?
+A: Yes.
+	Q(8.1):GOTO:ADV
+A: No.
+	Q(8.2):GOTO:9
+
+Q(9): Did you or your spouse have a Health Savings Account? This includes Form 5498-SA (<a href="https://www.irs.gov/pub/irs-pdf/f5498sa.pdf">https://www.irs.gov/pub/irs-pdf/f5498sa.pdf</a>), Form 1099-SA (<a href="https://www.irs.gov/pub/irs-pdf/f1099sa.pdf">https://www.irs.gov/pub/irs-pdf/f1099sa.pdf</a>), or Form W-2 with code "W" in box 12.
+A: Yes.
+	Q(9.1):GOTO:ADV
+A: No.
+	Q(9.2):GOTO:10
+
+Q(10): Did you or your spouse have credit card, student loan, or mortgage debt cancelled or forgiven by a lender or have a home foreclosure? This includes Form 1099-C (<a href="https://www.irs.gov/pub/irs-pdf/f1099c.pdf">https://www.irs.gov/pub/irs-pdf/f1099c.pdf</a>) and Form 1099-A (<a href="https://www.irs.gov/pub/irs-pdf/f1099a.pdf">https://www.irs.gov/pub/irs-pdf/f1099a.pdf</a>).
+A: Yes.
+	Q(10.1):GOTO:ADV
+A: No.
+	Q(10.2):GOTO:11
+
+Q(11): Did you or your spouse adopt a child?
+A: Yes.
+	Q(11.1):GOTO:ADV
+A: No.
+	Q(11.2):GOTO:12
+
+Q(12): Did you or your spouse purchase and install energy-efficient home items, such as windows, furnace, insulation, etc.?
+A: Yes.
+	Q(12.1):GOTO:ADV
+A: No.
+	Q(12.2):GOTO:13
+
+Q(13): Did you or your spouse receive the First Time Homebuyers Credit in 2008?
+A: Yes.
+	Q(13.1):GOTO:ADV
+A: No.
+	Q(13.2):GOTO:14
+
+Q(14): Did you or your spouse file a federal return last year containing a "capital loss carryover" on Form 1040 Schedule D? For reference, see Schedule D of Form 1040 here: <a href="https://www.irs.gov/pub/irs-pdf/f1040sd.pdf">https://www.irs.gov/pub/irs-pdf/f1040sd.pdf</a>.
+A: Yes.
+	Q(14.1):GOTO:ADV
+A: No.
+	Q(14.2):GOTO:15
+
+Q(15): Did you or your spouse have health coverage through the Marketplace (Exchange)?
+A: Yes.
+	Q(15.1):GOTO:ADV
+A: No.
+	Q(15.2): Your return requires a basic preparer. Please copy and paste the message below, filling in the information in brackets, and email to <b>taxhelp@caasomerville.org</b>. Someone will reach out within 48 hours of receiving your email to schedule your appointment.
+<p>
+"My name is [NAME] and I am reaching out to schedule a 30-minute basic tax preparation appointment. I am available [DATES AND TIMES]."</p>
+
+<p>Once you have requested an appointment, please review the documents you will need to bring with you for your meeting here: <a href="https://www.caasomerville.org/free-tax-preparation">https://www.caasomerville.org/free-tax-preparation</a>.</p>
+
+Q(ADV): Your return requires an advanced preparer. Please copy and paste the message below, filling in the information in brackets, and email to <b>taxhelp@caasomerville.org</b>. Someone will reach out within 48 hours of receiving your email to schedule your appointment.
+<p>
+"My name is [NAME] and I am reaching out to schedule a 1-hour advanced tax preparation appointment. I am available [DATES AND TIMES]."</p>
+
+<p>Once you have requested an appointment, please review the documents you will need to bring with you for your meeting here: <a href="https://www.caasomerville.org/free-tax-preparation">https://www.caasomerville.org/free-tax-preparation</a>.</p>
