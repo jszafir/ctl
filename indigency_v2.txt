@@ -1,0 +1,54 @@
+Title:Indigency "Flowchart"
+Author:Jennifer Szafir
+Before:<link rel="stylesheet" type="text/css" href="https://suffolklitlab.org/howto/qna/style/style.css">
+<div id="icon" style="background-size: 110px 99px;background-image: url('https://suffolklitlab.org/howto/qna/images/maxheadroom.gif');"></div>
+<h2 style="text-align:center;">Indigency "Flowchart"</h2>
+<p><b>This is a <a href="https://www.codingthelaw.org/level/2/#mission_p1">class project</a>. You should not rely on it as a source of legal information!</b></p>
+<p>Answer the following questions to see if you qualify for appointed counsel in Missouri.</p>
+
+After:
+<script>
+function fedpov(house,income,percentage){
+	// Determine if your income is less than or equal to a percentage of the 2020 federal poverty guidelines for the contiguous United States. See http://aspe.hhs.gov/poverty-guidelines
+
+		var line = NaN;
+
+		if (house == 1) {
+			line = 12760;
+		} else if (house == 2) {
+			line = 17240;
+		} else if (house == 3) {
+			line = 21720;
+		} else if (house == 4) {
+			line = 26200;
+		} else if (house == 5) {
+			line = 30680;
+		} else if (house == 6) {
+			line = 35160;
+		} else if (house == 7) {
+			line = 39640;
+		} else if (house == 8) {
+			line = 44120;
+		} else if (house > 8) {
+			line = 44120 + (house-8)*4480;
+		}
+
+		if (income <= (line*(percentage/100))) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+</script>
+    
+Q(1): Do you require public assistance?
+A:Yes
+	Q(1.1):GOTO:yes
+A:No
+	Q(house): Including yourself, how many members are there in your family/household?
+	X:number
+		Q(income): How much income does your household bring in per year after tax dollars?
+		X[javascript: if(fedpov(getvar('house'),getvar('income'),125)){goto('yes')}else{goto('no')}]:number
+Q(yes):You are eligible.
+Q(no):You are not eligible.
+Q(maybe): For each family/household member above 8, add $5,140 to $50,560. If your total income exceeds the amount you calculated, you are not eligible.
